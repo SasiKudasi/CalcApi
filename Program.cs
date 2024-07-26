@@ -10,14 +10,13 @@ namespace CalcApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddControllersWithViews();
             builder.Services.AddControllers();
             builder.Services.AddScoped<ICalcService, CalcService>();
             builder.Services.AddScoped<IParser, Parser.Parser>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -27,7 +26,9 @@ namespace CalcApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

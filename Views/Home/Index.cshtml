@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+
+
+<body>
+    <div class="test">
+        <h2>Сложение</h2>
+        <form name="idform">
+            <input type="text" name="a" value="0">
+            <input type="text" name="b" value="0">
+            <br>
+            <button type="button" value="Вычислить" onclick="location.href='https:localhost:7223/Calc/add?a='+ escape(a.value) +'&b='+escape(b.value)"> Вычислить </button>
+        </form>
+        <br>
+
+        <h2>Вычитание</h2>
+        <form name="idform">
+            <input type="text" name="a" value="0">
+            <input type="text" name="b" value="0">
+            <br>
+            <button type="button" value="Вычислить" onclick="location.href='https:localhost:7223/Calc/subtract?a='+ escape(a.value) +'&b='+escape(b.value)">Вычислить </button>
+        </form>
+        <br>
+
+
+        <h2>Умножение</h2>
+        <form name="idform">
+            <input type="text" name="a" value="0">
+            <input type="text" name="b" value="0">
+            <br>
+            <button type="button" value="Вычислить" onclick="location.href='https:localhost:7223/Calc/multiply?a='+ escape(a.value) +'&b='+escape(b.value)"> Вычислить </button>
+        </form>
+        <br>
+
+        <h2>Деление</h2>
+        <form name="idform">
+            <input type="text" name="a" value="0">
+            <input type="text" name="b" value="0">
+            <br>
+            <button type="button" value="Вычислить" onclick="location.href='https:localhost:7223/Calc/divide?a='+ escape(a.value) +'&b='+escape(b.value)">Вычислить </button>
+        </form>
+        <br>
+
+        <h2>Возведение в степень</h2>
+        <form name="idform">
+            <input type="text" name="a" value="0">
+            <input type="text" name="b" value="0">
+            <br>
+            <button type="button" value="Вычислить" onclick="location.href='https:localhost:7223/Calc/pow?a='+ escape(a.value) +'&b='+escape(b.value)">Вычислить </button>
+        </form>
+        <br>
+
+        <h2>Корень</h2>
+        <form name="idform">
+            <input type="text" name="a" value="0">
+            <input type="text" name="b" value="0">
+            <br>
+            <button type="button" value="Вычислить" onclick="location.href='https:localhost:7223/Calc/root?a='+ escape(a.value) +'&b='+escape(b.value)">Вычислить </button>
+        </form>
+        <br>
+
+        <h2>Сложные выражения</h2>
+        <form name="idform">
+            <input type="text" name="a" value="0">
+            <br>
+            <button type="button" value="Вычислить" onclick="location.href='https:localhost:7223/Calc/evaluate?expression='+ escape(a.value) "> Вычислить </button>
+        </form>
+    </div>
+</body>
